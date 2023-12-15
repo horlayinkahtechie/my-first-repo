@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body {
+    background-color: #fab22e;
+}
+
+        .wrapper {
+            max-width: 80%;
+            min-width: 30%;
+            padding: 50px 40px;
+            background-color: #15161a;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 5px;
+            box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4);
+        }
+
+        #btn {
+         display: block;
+         background-color: #fab22e;
+         border: none;
+         padding: 5px;
+         font-size: #ffffff;
+         color: #171721;
+         font-weight: 600;
+         padding: 12px 25px;
+         margin: 10px auto;
+         margin-top: 40px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 17.5px;
+        }
+
+        
+
+        p {
+         font-size: 22px;
+         color: #ffffff;
+         font-weight: 400; 
+         word-wrap: break-word;
+         line-height: 35px;
+         margin: 20px auto;
+        }
+
+        .word-name {
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+       .audio {
+        border: none;
+        background-color: #15161a;
+       }
+
+       .hidden {
+        display: none;
+       }
+
+       select {
+        padding: 5px;
+        width: 70%;
+        border: none;
+        outline: none;
+        border-radius: 0;
+        background-color: #15161a;
+        border-bottom: 3px solid #ae9cff;
+        font-size: 16px;
+        margin-bottom: 18px;
+        color: white;
+       }
+
+       .yoruba, .igbo, .hausa {
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div style="text-align: center;">
+            <select id="language" name="languages" class="language-input" style="width: 300px; height: 40px; border-radius: 5px;">
+                <option value="yoruba" class="yoruba" style="text-align: center; font-size: 19px;">Yoruba</option>
+                <option value="igbo" class="igbo" style="text-align: center; font-size: 19px;">Igbo</option>
+                <option value="hausa" class="hausa" style="text-align: center; font-size: 19px;">Hausa</option>
+            </select>
+        </div>
+        <div class="render container text-center">
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="word-name">Word Name (English)</p>
+                    
+                </div>
+                <div class="col-md-5 render-audio-btn">
+                    
+                    <button class="audio audio1" id="toggleButton" type="button"><img src="noun-audio-3397384.png" style="border-radius: 50%; width: 40px; height: 40px; " class="img-fluid word-name" alt=""></button>
+                </div>
+                <div class="col-md-7">
+                    <p class="word-example">Example (English).</p>
+                </div>
+                <div class="col-md-5">
+                    <button class="audio audio2" id="toggleButton" type="button"><img src="noun-audio-3397384.png" style="border-radius: 50%; width: 40px; height: 40px; " class="img-fluid word-name" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <button id="btn">Get Random Word</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
